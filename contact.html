@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Contact Hemavati through the accessible contact form on her portfolio website.">
+
+    <meta name="author" content="Hemavati Shankar Durgannanavar">
+
+    <title>Hemavati Shankar Durgannanavar | Contact</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Contact Me</h1>
+        <p>Get in touch with me.</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav aria-label="Main navigation">
+
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
+            <li>
+                <a href="projects.html">Projects</a>
+            </li>
+
+            <li>
+                <a href="contact.html" aria-current="page">Contact</a>
+            </li>
+        </ul>
+
+        <!-- Dark Mode Button -->
+        <button type="button" id="theme-toggle" aria-label="Toggle dark mode">
+            🌙
+        </button>
+
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Contact Form -->
+        <section aria-labelledby="contact-heading">
+
+            <h2 id="contact-heading">Send Me a Message</h2>
+
+            <form>
+
+                <div>
+                    <label for="name">Your Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required>
+                </div>
+
+                <div>
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        required>
+                </div>
+
+                <div>
+                    <label for="subject">Subject</label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="Enter the subject"
+                        required>
+                </div>
+
+                <div>
+                    <label for="message">Your Message</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your message here"
+                        required></textarea>
+                </div>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Contact Information -->
+        <section aria-labelledby="contact-info-heading">
+
+            <h2 id="contact-info-heading">Contact Information</h2>
+
+            <p>
+                <strong>Email:</strong>
+                <a href="mailto:hemavatidurgannanavar@gmail.com">
+                    hemavatidurgannanavar@gmail.com
+                </a>
+            </p>
+
+            <p>
+                I am happy to connect and discuss projects,
+                learning opportunities and technology.
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 Hemavati Shankar Durgannanavar.
+            All rights reserved.
+        </p>
+    </footer>
+
+    <!-- Dark Mode JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

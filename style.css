@@ -1,0 +1,358 @@
+/* =========================================
+   CSS VARIABLES
+   ========================================= */
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #222222;
+    --primary-color: #2563eb;
+    --nav-color: #163a5c;
+    --card-color: #f5f5f5;
+    --article-color: #f4f7fb;
+    --border-color: #dddddd;
+}
+
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --primary-color: #60a5fa;
+    --nav-color: #0d2538;
+    --card-color: #1e1e1e;
+    --article-color: #252525;
+    --border-color: #444444;
+}
+
+
+/* =========================================
+   GENERAL PAGE STYLING
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 2.2rem;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+nav {
+    background-color: var(--nav-color);
+    padding: 12px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #2f6f9f;
+}
+
+nav a:focus {
+    outline: 3px solid #ffd166;
+    outline-offset: 3px;
+}
+
+nav a[aria-current="page"] {
+    background-color: #2f6f9f;
+}
+
+
+/* =========================================
+   SMALL DARK MODE BUTTON
+   ========================================= */
+
+#theme-toggle {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0 0 0 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+#theme-toggle:focus {
+    outline: 3px solid #ffd166;
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: var(--card-color);
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    transition: background-color 0.3s ease;
+}
+
+section h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+
+/* =========================================
+   ARTICLE
+   ========================================= */
+
+article {
+    padding: 15px;
+    border-left: 5px solid var(--primary-color);
+    background-color: var(--article-color);
+    border-radius: 5px;
+}
+
+article h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+
+/* =========================================
+   PROJECTS - CSS GRID
+   ========================================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.project-card {
+    min-width: 0;
+    height: 100%;
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   LISTS
+   ========================================= */
+
+main ul {
+    padding-left: 25px;
+}
+
+main li {
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
+   LINKS
+   ========================================= */
+
+main a {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+main a:focus {
+    outline: 3px solid #ffd166;
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    background-color: var(--nav-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* =========================================
+   CONTACT FORM
+   ========================================= */
+
+form {
+    max-width: 700px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    margin-top: 15px;
+}
+
+input,
+textarea,
+button {
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+}
+
+input,
+textarea {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+form button {
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #163a5c;
+}
+
+input:focus,
+textarea:focus,
+form button:focus {
+    outline: 3px solid #ffd166;
+    outline-offset: 2px;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    #theme-toggle {
+        margin: 5px 0 0;
+    }
+
+    main {
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
